@@ -1,6 +1,0 @@
-numpy
-pandas
-nltk
-sklearn
-pickle
-requests
