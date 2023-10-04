@@ -13,7 +13,7 @@ path = os.path.dirname(__file__)
 
 # The movies dataset is loaded, which is in the form of dictionary. So, it is changed into the dataframe.
 my_file = path+'/movies_dict.pkl'
-movies_dict = pickle.load(my_file, 'rb')
+movies_dict = pickle.load(open(my_file, 'rb'))
 movies = pd.DataFrame(movies_dict)
 
 #similarity matrix, representing the distance is loaded as it is
