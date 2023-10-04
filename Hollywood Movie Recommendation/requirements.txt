@@ -1,7 +1,0 @@
-numpy
-pandas
-nltk
-sklearn
-pickle
-requests
-bz2
