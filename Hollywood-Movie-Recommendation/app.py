@@ -9,11 +9,11 @@ import bz2
 st.title('Movie Recommendation System')
 
 # The movies dataset is loaded, which is in the form of dictionary. So, it is changed into the dataframe.
-movies_dict = pickle.load(open('movies_dict.pkl', 'rb'))
+movies_dict = pickle.load(open('/movies_dict.pkl', 'rb'))
 movies = pd.DataFrame(movies_dict)
 
 #similarity matrix, representing the distance is loaded as it is
-similarity= bz2.BZ2File("similarity.pkl",'rb')
+similarity= bz2.BZ2File("/similarity.pkl",'rb')
 similarity_matrix  = pickle.load(similarity)
 similarity.close()
 
@@ -23,7 +23,7 @@ def fetch_poster(movie_id):
     response = requests.get('https://api.themoviedb.org/3/movie/{}?api_key=4a502c7d2be3ae2d76c8418ec12b1962&language=en-US'.format(movie_id))
     data = response.json()
     if data['poster_path'] is None:
-        temporary_pic = 'NOPIC.jpg'
+        temporary_pic = '/NOPIC.jpg'
         return temporary_pic
     else:
         return 'http://image.tmdb.org/t/p/w500/' + str(data['poster_path'])
