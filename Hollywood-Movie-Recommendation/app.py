@@ -13,7 +13,7 @@ path = os.path.dirname(__file__)
 my_file = path+'/movies_dict.pkl'
 
 # The movies dataset is loaded, which is in the form of dictionary. So, it is changed into the dataframe.
-movies_dict = pickle.load(open(myfile, 'rb'))
+movies_dict = pickle.load(open(my_file, 'rb'))
 movies = pd.DataFrame(movies_dict)
 
 my_file2 = path+"/similarity.pkl"
