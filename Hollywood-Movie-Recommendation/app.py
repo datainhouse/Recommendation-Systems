@@ -4,6 +4,7 @@ import pickle
 import pandas as pd
 import requests
 import bz2
+import os
 
 # This will show the title of our app
 st.title('Movie Recommendation System')
