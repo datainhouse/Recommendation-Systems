@@ -55,6 +55,7 @@ if st.button('Recommend'):
     col1, col2, col3 = st.columns(3)
     col4, col5, col6 = st.columns(3)
     col7, col8, col9 = st.columns(3)
+    col10, col11, col12 = st.columns(3)
 
     with col1:
         st.text(names[0])
@@ -83,6 +84,15 @@ if st.button('Recommend'):
     with col9:
         st.text(names[8])
         st.image(posters[8])
+    with col10:
+        st.text(names[9])
+        st.image(posters[9])
+    with col11:
+        st.text(names[10])
+        st.image(posters[10])
+    with col12:
+        st.text(names[11])
+        st.image(posters[11])
 
     
 
